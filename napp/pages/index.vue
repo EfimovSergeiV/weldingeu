@@ -1,7 +1,8 @@
 <template>
   <div class="">
-    <p>HALLO WELT</p>
-    <nuxt-link :to="{ name: 'about'}">to about page</nuxt-link>
+    <HeaderSection />
+    <p class="text-3xl">{{ $t('welcome') }}</p>
+    <nuxt-link :to="localePath('about')">to about page</nuxt-link>
     <div class="">
       <p class="mdi mdi-check font-bold text-3xl">hallo welt</p>
     </div>
@@ -84,7 +85,12 @@
 </template>
 
 <script>
+import HeaderSection from '@/components/sections/HeaderSection.vue'
+
 export default {
   name: 'IndexPage',
+  components: {
+    HeaderSection,
+  }
 }
 </script>

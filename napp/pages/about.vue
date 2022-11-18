@@ -1,6 +1,8 @@
 <template>
   <div class="">
-    <nuxt-link :to="{ name: 'index'}">to main page</nuxt-link>
+    <HeaderSection />
+
+    <nuxt-link :to="localePath('index')">to main page</nuxt-link>
     <p>This is about page</p>
 
 <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900">
@@ -78,3 +80,14 @@
 
   </div>
 </template>
+
+<script>
+import HeaderSection from '@/components/sections/HeaderSection.vue'
+
+export default {
+  name: 'AboutPage',
+  components: {
+    HeaderSection,
+  }
+}
+</script>
