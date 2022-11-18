@@ -1,7 +1,6 @@
 <template>
   <div class="">
     <HeaderSection />
-    <p class="text-3xl">{{ $t('welcome') }}</p>
     <nuxt-link :to="localePath('about')">to about page</nuxt-link>
     <div class="">
       <p class="mdi mdi-check font-bold text-3xl">hallo welt</p>

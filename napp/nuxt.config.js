@@ -56,22 +56,23 @@ export default {
   ],
 
   i18n: {
-    locales: ['en', 'de', 'ru'],
-    defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: {
-          welcome: 'Welcome'
-        },
-        de: {
-          welcome: 'Hallo'
-        },
-        ru: {
-          welcome: 'Привет'
-        }
+    locales: [
+      {
+        code: 'de',
+        file: 'de-DE.json'
+      },
+      {
+        code: 'en',
+        file: 'en-US.json'
+      },
+      {
+        code: 'ru',
+        file: 'ru-RU.json'
       }
-    }
+    ],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
