@@ -1,7 +1,13 @@
 <template>
-  <h1 class="text-3xl font-bold underline text-gray-800">
-    Hello world!
-  </h1>
+  <div class="">
+    <p>HALLO WELT</p>
+
+    <div class="">
+      <p class="font-bold text-3xl">hallo welt</p>
+    </div>
+
+  </div>
+
 </template>
 
 <script>
