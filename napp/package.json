@@ -19,6 +19,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/container-queries": "^0.1.0",
     "core-js": "^3.25.3",
+    "hooper": "^0.3.4",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",

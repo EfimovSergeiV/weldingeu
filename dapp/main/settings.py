@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'parler',
+    'ckeditor',
+    'catalog.apps.CatalogConfig',
 ]
 
 MIDDLEWARE = [
@@ -103,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
@@ -111,13 +114,37 @@ USE_I18N = True
 
 USE_TZ = True
 
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en-US',},
+        {'code': 'de-DE',},
+        {'code': 'ru-RU',},
+    ),
+    'default': {
+        'fallbacks': ['en'],          # defaults to PARLER_DEFAULT_LANGUAGE_CODE
+        'hide_untranslated': False,   # the default; let .active_translations() return fallbacks too.
+    }
+}
+
+PARLER_DEFAULT_LANGUAGE_CODE = 'en'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static/'
+MEDIA_URL = '/files/'
+MEDIA_ROOT = BASE_DIR / 'files/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'fill',
+        'height': 300,
+        'width': 'fill',
+    },
+}
