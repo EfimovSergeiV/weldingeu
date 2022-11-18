@@ -8,8 +8,7 @@ from catalog.models import ProductModel
 
 
 class ProductForm(TranslatableModelForm):
-    description = forms.CharField(label='Описание', widget=CKEditorWidget())
-
+    description = TranslatedField(label='Описание', widget=CKEditorWidget())
 
 
 class ProductAdmin(TranslatableAdmin):
