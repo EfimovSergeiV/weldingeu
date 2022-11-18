@@ -14,7 +14,24 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
+    '@assets/low-priorty.pcss',
+    '@assets/high-priorty.pcss',
+    '@mdi/font/css/materialdesignicons.min.css',
   ],
+
+  tailwindcss: {
+    cssPath: '~/assets/css/main.css',
+    configPath: 'tailwind.config.js',
+    exposeConfig: true,
+    config: {},
+    injectPosition: 0,
+    viewer: true,
+    injectPosition: { 
+      // 'low-priority' will have lower priority than Tailwind stylesheet, 
+      // while 'high-priorty' will override it
+      after: 'assets/low-priorty.pcss'
+    }
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

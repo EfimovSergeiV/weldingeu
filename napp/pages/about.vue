@@ -1,12 +1,9 @@
 <template>
   <div class="">
-    <p>HALLO WELT</p>
-    <nuxt-link :to="{ name: 'about'}">to about page</nuxt-link>
-    <div class="">
-      <p class="mdi mdi-check font-bold text-3xl">hallo welt</p>
-    </div>
+    <nuxt-link :to="{ name: 'index'}">to main page</nuxt-link>
+    <p>This is about page</p>
 
-    <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900">
+<footer class="p-4 bg-white sm:p-6 dark:bg-gray-900">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="https://flowbite.com/" class="flex items-center">
@@ -80,11 +77,4 @@
 </footer>
 
   </div>
-
 </template>
-
-<script>
-export default {
-  name: 'IndexPage',
-}
-</script>
